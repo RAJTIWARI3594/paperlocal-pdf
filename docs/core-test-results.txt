@@ -1,0 +1,48 @@
+✔ blank range means all pages (2.030497ms)
+✔ range preserves explicit order (0.28559ms)
+✔ whitespace range (0.13927ms)
+✔ reject range 0 (0.275131ms)
+✔ reject range 4 (0.16479ms)
+✔ reject range 3-1 (0.116962ms)
+✔ reject range -1 (0.096202ms)
+✔ reject range 1.5 (0.167422ms)
+✔ reject range 1, (0.127403ms)
+✔ reject range 1,,2 (0.273468ms)
+✔ reject range 1,1 (0.169029ms)
+✔ reject range 1-2,2-3 (0.103511ms)
+✔ reject range 1e2 (0.1512ms)
+✔ reject range foo (0.082424ms)
+✔ reject range 1-999999999 (0.078737ms)
+✔ empty source range rejects (0.169122ms)
+✔ rotation 0 (0.131077ms)
+✔ rotation 90 (0.053817ms)
+✔ rotation -90 (0.050198ms)
+✔ rotation 450 (0.050208ms)
+✔ rotation 720 (0.048188ms)
+✔ reject arbitrary rotation (0.0957ms)
+✔ PDF file accepted (0.308818ms)
+✔ uppercase JPG accepted (0.178101ms)
+✔ non-PDF rejected (0.13267ms)
+✔ wrong image rejected (0.121381ms)
+✔ zero bytes rejected (0.08962ms)
+✔ combined byte limit (0.95428ms)
+✔ file count limit (0.12581ms)
+✔ empty selection (0.082049ms)
+✔ real PDF loads (5.420732ms)
+✔ malformed PDF rejected (0.498314ms)
+✔ oversized page count rejected (48.435375ms)
+✔ merge retains page order and distinct dimensions (10.17639ms)
+✔ rotation adds to original page rotation (3.700283ms)
+✔ selection omission and reorder (2.651086ms)
+✔ export no selected pages rejects (0.177623ms)
+✔ missing source rejects (0.302189ms)
+✔ invalid page index rejects (0.235813ms)
+✔ bad page size rejects (0.197319ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 211.208928

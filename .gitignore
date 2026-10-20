@@ -1,0 +1,6 @@
+node_modules/
+.test-output/
+tests/fixtures/
+__pycache__/
+.venv/
+.DS_Store

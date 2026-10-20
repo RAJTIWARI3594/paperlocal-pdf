@@ -1,0 +1,90 @@
+{
+  "checks": [
+    "Home loads with local assets only",
+    "Merge reads two actual PDFs and renders real page thumbnails",
+    "Merge download preserves independently extracted text in all five pages",
+    "Page reorder, deselection and rotation survive downloaded output",
+    "Extract respects explicit range order, text and original dimensions",
+    "Invalid range keeps prior selection intact",
+    "No-selection export is disabled and can be restored",
+    "PDF export works with browser network switched offline after load",
+    "Single-PDF tools reject extra source without dropping current pages",
+    "Clear removes file workspace",
+    "encrypted.pdf rejected with clear error",
+    "broken.pdf rejected with clear error",
+    "empty.pdf rejected with clear error",
+    "wrong.txt rejected with clear error",
+    "Invalid mixed batch is atomic, not partially added",
+    "PNG and JPEG become real embedded-image PDFs with orientation-aware A4 dimensions",
+    "Original photo size uses documented 96px/inch conversion",
+    "Photo reorder and rotation persist",
+    "Download filenames strip path separators",
+    "390px mobile workspace has no horizontal overflow",
+    "Standalone Organize tool reorders actual PDF output",
+    "Untrusted filenames remain text, not executable HTML",
+    "Workspace controls participate in keyboard navigation",
+    "Zero document-upload requests, third-party requests or uncaught JavaScript errors across workflows"
+  ],
+  "count": 24,
+  "browser": "155.0.8059.79",
+  "viewport_tests": [
+    "1440x1050",
+    "390x844"
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/style.css"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/src/app.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/src/core.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/vendor/pdf.mjs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/vendor/pdf-lib.esm.min.js"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/favicon.svg"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/vendor/pdf.worker.min.mjs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/vendor/pdf.worker.min.mjs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/vendor/pdf.worker.min.mjs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/vendor/pdf.worker.min.mjs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/vendor/pdf.worker.min.mjs"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:PORT/vendor/pdf.worker.min.mjs"
+    }
+  ],
+  "page_errors": [],
+  "limits": "Linux Chromium only; no physical phone/Safari/Firefox testing"
+}

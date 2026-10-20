@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Free, local-first PDF tools. Merge, extract, reorder, rotate and turn photos into PDFs without uploading your documents."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; worker-src 'self' blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Paperlocal — A little less paperwork.</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./src/app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#workspace">Skip to workspace</a>
+    <header>
+      <a class="brand" href="./" aria-label="Paperlocal home"
+        ><span class="logo" aria-hidden="true">p<span>•</span></span
+        >paperlocal<span class="brand-tag">PDF TOOLS</span></a
+      ><span class="local"><i></i> Your files stay with you</span
+      ><a class="about-link" href="#privacy"
+        >How it works <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">LESS FRICTION. MORE DONE.</span>
+          <h1>A little less<br /><em>paperwork.</em></h1>
+          <p>
+            Bring your PDFs together. Take just the pages you need.<br
+              class="desktop"
+            />
+            All in your browser. None on a document server.
+          </p>
+          <div class="perks">
+            <span>Free, no account</span><span>No watermarks</span
+            ><span>Works locally</span>
+          </div>
+        </div>
+        <div class="illustration" aria-hidden="true">
+          <div class="paper behind">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="paper front">
+            <b>One tidy file.</b>
+            <div class="mini-lines"></div>
+            <div class="chart"><i></i><i></i><i></i><i></i></div>
+            <div class="seal">Made simple ↗</div>
+          </div>
+          <div class="floating">100% in your browser</div>
+        </div>
+      </section>
+      <section id="workspace" class="workspace" aria-label="PDF workspace">
+        <div class="tool-tabs" role="group" aria-label="Choose a tool">
+          <button class="active" data-mode="merge" aria-pressed="true">
+            <span>⊞</span> Merge PDFs</button
+          ><button data-mode="extract" aria-pressed="false">
+            <span>⇢</span> Extract pages</button
+          ><button data-mode="organize" aria-pressed="false">
+            <span>↻</span> Organize PDF</button
+          ><button data-mode="images" aria-pressed="false">
+            <span>▧</span> Photos to PDF
+          </button>
+        </div>
+        <div class="workspace-inner">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow" id="step">01 / BRING YOUR FILES</span>
+              <h2 id="tool-title">Good things come together.</h2>
+              <p id="tool-description">
+                Add PDFs, put their pages in order, and save one tidy document.
+              </p>
+            </div>
+            <span class="privacy-pill">No document uploads</span>
+          </div>
+          <div id="dropzone" class="dropzone">
+            <div class="upload-icon" aria-hidden="true">↑</div>
+            <h3 id="drop-title">Drop your PDFs here</h3>
+            <p>or choose them from your device</p>
+            <label class="primary pick" for="files"
+              >Choose files <span aria-hidden="true">+</span></label
+            ><input
+              id="files"
+              type="file"
+              accept="application/pdf,.pdf"
+              multiple
+            /><small id="limits"
+              >Up to 30 files · 50 MiB total · 200 pages</small
+            >
+          </div>
+          <div class="notice" id="notice" role="status" aria-live="polite">
+            Ready when you are. Original files are never changed.
+          </div>
+          <div id="editor" hidden>
+            <div class="editor-bar">
+              <div>
+                <h3 id="page-count">Your pages</h3>
+                <p>Preview, select, and arrange before downloading.</p>
+              </div>
+              <div class="actions">
+                <button id="select-all">Select all</button
+                ><button id="select-none">Select none</button
+                ><button id="reset" class="danger">Clear files</button>
+              </div>
+            </div>
+            <div id="range-box" class="range-box">
+              <label for="range"
+                >Select pages by number <small>(current order)</small></label
+              >
+              <div>
+                <input
+                  id="range"
+                  placeholder="e.g. 1, 3-5"
+                  autocomplete="off"
+                /><button id="apply-range">Apply selection</button>
+              </div>
+              <small
+                >Comma-separated numbers or forward ranges. Selection keeps the
+                order you enter.</small
+              >
+            </div>
+            <div
+              id="pages"
+              class="page-grid"
+              aria-label="Pages in output order"
+            ></div>
+            <div class="export-bar">
+              <div class="export-settings">
+                <label for="filename"
+                  >File name<input
+                    id="filename"
+                    value="paperlocal-merged.pdf"
+                    maxlength="100" /></label
+                ><label id="size-label" for="page-size" hidden
+                  >Photo page size<select id="page-size">
+                    <option value="a4">A4 · fit with margins</option>
+                    <option value="original">
+                      Image size · 96 pixels/inch
+                    </option>
+                  </select></label
+                >
+              </div>
+              <div class="export-right">
+                <span id="selection-count"></span
+                ><button id="download" class="primary">
+                  Download PDF <span aria-hidden="true">↓</span>
+                </button>
+              </div>
+            </div>
+            <p class="output-note">
+              Check the downloaded file before sharing. PDF forms, signatures,
+              bookmarks and interactive features may not survive page
+              operations.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="bottom-notes" id="privacy">
+        <article>
+          <span class="note-number">01</span>
+          <h3>Private by design.</h3>
+          <p>
+            Document processing happens on this device. No analytics, accounts,
+            ads, or document-upload endpoints. Hosting still receives ordinary
+            page and asset requests.
+          </p>
+        </article>
+        <article>
+          <span class="note-number">02</span>
+          <h3>Keep your originals.</h3>
+          <p>
+            Download a new PDF, without changing the source. Files stay in this
+            tab's memory until cleared or closed. Downloads remain on your
+            device.
+          </p>
+        </article>
+        <article>
+          <span class="note-number">03</span>
+          <h3>Know the boundaries.</h3>
+          <p>
+            Not a PDF editor, compressor or password remover. For protected,
+            very large, or signed documents, use a trusted specialist tool.
+          </p>
+        </article>
+      </section>
+      <footer>
+        <a class="brand" href="./"
+          >paperlocal<span class="brand-tag"
+            >A SMALL TOOL. A USEFUL DIFFERENCE.</span
+          ></a
+        ><span>Open source · Built with care, with AI assistance.</span>
+      </footer>
+    </main>
+  </body>
+</html>

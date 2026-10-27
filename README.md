@@ -85,3 +85,7 @@ Linux may need Playwright's documented system dependencies. Tests generate synth
 ## Credits and license
 
 Developed for Raj's portfolio with AI assistance from Wabi. The application and documentation are MIT-licensed; this is not a claim of professional client work or independent authorship. Original CSS artwork; no copied commercial brand assets. Third-party components retain their licenses: see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Useful improvements and reproducible bug reports are welcome; never put private documents in an issue.
+
+## Live demo
+
+Open the browser version at <https://rajtiwari3594.github.io/paperlocal-pdf/>. It runs entirely in the browser; each visitor's documents or study data stay in that browser and are not synchronized to an account.
